@@ -230,6 +230,10 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
   app.use(express.static(path.resolve('frontend/dist/frontend')))
+  app.get('/loaderio-18e008cc2ae144e5645d66c70d08680b.txt', (req, res) => {
+    res.send('loaderio-18e008cc2ae144e5645d66c70d08680b');
+});
+  
   app.use(cookieParser('kekse'))
   // vuln-code-snippet end directoryListingChallenge accessLogDisclosureChallenge
 
